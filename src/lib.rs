@@ -180,25 +180,6 @@ impl<T: Debug> Debug for Signed<T> {
     }
 }
 
-// mod lolkekcheburek {
-//     use rsa::RsaPublicKey;
-//     use serde::{Deserialize, Serialize};
-
-//     #[derive(Deserialize, Serialize)]
-//     pub struct SignatureInner<T> {
-//         data: T,
-//         valid_until: chrono::DateTime<chrono::Utc>,
-//         claims: Vec<String>,
-//     }
-
-//     #[derive(Deserialize, Serialize)]
-//     pub struct Signature<T> {
-//         info: SignatureInner<T>,
-//         proof: (),
-//         signer: RsaPublicKey,
-//     }
-// }
-
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 pub struct DataSignature<T> {
     // Proof that the owner has signed the `cerf` field
